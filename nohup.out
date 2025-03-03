@@ -1,0 +1,88 @@
+Watching for file changes with StatReloader
+[23/Feb/2025 14:35:36] "GET / HTTP/1.1" 200 65
+Watching for file changes with StatReloader
+[23/Feb/2025 14:38:45] "GET / HTTP/1.1" 200 65
+[23/Feb/2025 14:38:47] "GET / HTTP/1.1" 200 65
+Error: That port is already in use.
+Watching for file changes with StatReloader
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 23, 2025 - 21:16:44
+Django version 5.1.6, using settings 'backend.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 126, in inner_run
+    autoreload.raise_last_exception()
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/apps/registry.py", line 124, in populate
+    app_config.ready()
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/contrib/admin/apps.py", line 27, in ready
+    self.module.autodiscover()
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/contrib/admin/__init__.py", line 52, in autodiscover
+    autodiscover_modules("admin", register_to=site)
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/utils/module_loading.py", line 58, in autodiscover_modules
+    import_module("%s.%s" % (app_config.name, module_to_search))
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/traffic_monitoring/admin.py", line 2, in <module>
+    from .models import YourModelName
+ImportError: cannot import name 'YourModelName' from 'traffic_monitoring.models' (/mnt/c/Users/rahul/smart_traffic_system/backend/traffic_monitoring/models.py)
+Traceback (most recent call last):
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/manage.py", line 22, in <module>
+    main()
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 382, in execute
+    settings.INSTALLED_APPS
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 68, in _setup
+    self._wrapped = Settings(settings_module)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 166, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/backend/settings.py", line 14, in <module>
+    print(settings.BASE_DIR)
+          ^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/rahul/smart_traffic_system/backend/venv/lib/python3.12/site-packages/django/conf/__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'BASE_DIR'
+Error: That port is already in use.
